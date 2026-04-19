@@ -13,7 +13,7 @@ This project is a DevOps-based web application that demonstrates end-to-end depl
 ---
 
 ## 🌐 Live Demo
-🔗 https://devops-project-3g3i.onrender.com/
+🔗 [Click here to view project](https://devops-project-3g3i.onrender.com/)
 
 
 ---
