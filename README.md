@@ -54,3 +54,6 @@ Vennacheti Jayanthi
 
 ## ⭐ Conclusion
 This project demonstrates a complete DevOps workflow with a real-time dashboard.
+
+![Home](home.png.png)
+![Dashboard](dashboard.png.png)
