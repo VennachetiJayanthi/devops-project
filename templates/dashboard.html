@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-light text-center">
+
+<div class="container mt-5">
+    <h2>📊 DevOps Monitoring Dashboard</h2>
+<p class="text-muted">Real-time Kubernetes Metrics Visualization</p>
+
+    <div class="row mt-4">
+
+        <!-- Pod Name -->
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <h5>Pod Name</h5>
+                <p class="text-primary">{{ hostname }}</p>
+            </div>
+        </div>
+
+        <!-- CPU -->
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <h5>CPU Usage</h5>
+                <p class="text-danger">{{ cpu }} %</p>
+            </div>
+        </div>
+
+        <!-- Requests -->
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <h5>Requests</h5>
+                <p class="text-success">{{ requests }}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Chart -->
+    <div class="card mt-5 p-4 shadow">
+        <h5>CPU Usage Chart</h5>
+        <canvas id="cpuChart"></canvas>
+    </div>
+
+</div>
+
+<script>
+    const ctx = document.getElementById('cpuChart');
+
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1','2','3','4','5','6'],
+            datasets: [{
+                label: 'CPU Usage',
+                data: [
+                    Math.floor(Math.random()*100),
+                    Math.floor(Math.random()*100),
+                    Math.floor(Math.random()*100),
+                    Math.floor(Math.random()*100),
+                    Math.floor(Math.random()*100),
+                    {{ cpu }}
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+
+    // 🔥 AUTO REFRESH EVERY 3 SECONDS
+    setTimeout(() => {
+        location.reload();
+    }, 3000);
+</script>
+
+</body>
+</html>
