@@ -1,3 +1,10 @@
+# 🚀 DevOps Monitoring System
+
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Flask](https://img.shields.io/badge/Flask-WebApp-green)
+![Docker](https://img.shields.io/badge/Docker-Container-blue)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Orchestration-blue)
+![Render](https://img.shields.io/badge/Deployment-Render-purple)
 # 🚀 DevOps Monitoring System (Flask + Docker + Kubernetes + Cloud)
 
 ## 📌 Project Overview
