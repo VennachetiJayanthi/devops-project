@@ -1,14 +1,11 @@
-import random
 from flask import Flask, render_template
-import socket
+import random
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return render_template("index.html")
-
-
 
 @app.route("/dashboard")
 def dashboard():
@@ -23,5 +20,6 @@ def dashboard():
                            cpu=cpu,
                            requests=requests)
 
+# IMPORTANT FOR RENDER
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run()
